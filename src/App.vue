@@ -8,15 +8,7 @@
     >
       <v-spacer></v-spacer>
       <v-btn v-if="!user" color="success" @click="loginDialog()">LOGIN</v-btn>
-      <v-avatar v-else
-         @click="logOut()"
-        color="primary"
-      >
-        <img
-          :src="user.photoURL"
-          :alt="user.name"
-        >
-      </v-avatar>
+      <userMenu  v-if="user"/>
 
     </v-app-bar>
 
@@ -51,7 +43,7 @@
 </template>
 
 <script>
-import HomePage from './components/HomePage';
+import userMenu from './components/userMenu';
 import {get,sync} from 'vuex-pathify'
 import firebase from 'firebase'
 
@@ -59,7 +51,7 @@ export default {
   name: 'App',
 
   components: {
-    HomePage,
+    userMenu,
   },
 
   data: () => ({
@@ -74,9 +66,6 @@ export default {
   },
 
   methods: {
-    logOut() {
-      this.$store.dispatch("general/logOut")
-    },
     login(){
       let store = this.$store
       firebase.auth().onAuthStateChanged(async (user) => {

@@ -40,7 +40,6 @@ const actions = {
         name: name || "",
         lastName: lastName || "",
       })
-      dispatch("saveUser")
     }
   },
 }

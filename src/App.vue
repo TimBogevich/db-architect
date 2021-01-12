@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <v-app-bar
+      dense
       app
       clipped-left
       color="primary"
@@ -12,7 +13,7 @@
           </v-toolbar-title>
          </router-link>
       <v-spacer></v-spacer>
-      <v-btn v-if="!user" color="success" @click="loginDialog()">LOGIN</v-btn>
+      <v-btn v-if="!user"  text @click="loginDialog()">LOGIN</v-btn>
       <userMenu  v-if="user"/>
 
       <v-progress-linear

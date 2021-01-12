@@ -8,6 +8,7 @@
           v-bind="attrs"
           v-on="on"
           color="primary"
+          size="35"
         >
           <img
             :src="user.photoURL"
@@ -26,9 +27,11 @@
               User menu
             </div>
             <v-list-item-title class="headline mb-1">
-              {{user.name}}
+              {{user.name}} {{user.lastName}}
             </v-list-item-title>
-            <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle>
+            <v-list-item-subtitle>
+              {{user.email}}
+            </v-list-item-subtitle>
           </v-list-item-content>
 
           <v-list-item-avatar
@@ -43,7 +46,6 @@
         <v-card-actions>
           <v-btn
             outlined
-            rounded
             @click="logOut()"
             text
           >

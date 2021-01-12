@@ -8,7 +8,7 @@
     >
          <router-link to="/">
           <v-toolbar-title class="logo_text">
-              <span>DB Architect</span>
+              <span>DB Tools</span>
           </v-toolbar-title>
          </router-link>
       <v-spacer></v-spacer>

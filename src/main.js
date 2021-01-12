@@ -2,11 +2,28 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import vuetify from './plugins/vuetify';
+import firebase from "./firebaseConf"
+import i18n from './i18n'
+import * as ModalDialogs from 'vue-modal-dialogs'
 
 Vue.config.productionTip = false
+
+import login from './components/login'
+import areYouSure from './components/areYouSure'
+
+const dialogLogin = ModalDialogs.create({component: login, wrapper: 'login', props : ['content']})
+const dialogAreYouSure = ModalDialogs.create({component: areYouSure,wrapper: 'areYouSure', props : ['content']})
+
+Vue.prototype.$dialogLogin = dialogLogin
+Vue.prototype.$areYouSure = dialogAreYouSure
+
+Vue.use(ModalDialogs) 
 
 new Vue({
   router,
   store,
+  vuetify,
+  i18n,
   render: h => h(App)
 }).$mount('#app')

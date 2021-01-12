@@ -1,15 +1,21 @@
 <template>
   <div>
     <v-container grid-list-xs>
-      Storage calc
+      <StorageCalc/>
     </v-container>
   </div>
 </template>
 
 <script>
-  export default {
-    
+// @ is an alias to /src
+import StorageCalc from '@/components/StorageCalc'
+
+export default {
+  name: 'Home',
+  components: {
+    StorageCalc
   }
+}
 </script>
 
 <style lang="scss" scoped>

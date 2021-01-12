@@ -25,7 +25,7 @@
       clipped
     >
 
-      <v-list dense v-for="item in navBarLinks" :key="item.link">
+      <v-list v-for="item in navBarLinks" :key="item.link">
         <v-list-item link :to="item.link">
           <v-list-item-content>
             <v-list-item-title>

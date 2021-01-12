@@ -165,11 +165,11 @@
     },
     methods: {
       async googleLogin() {
-        let response = await firebase.auth().signInWithRedirect(this.$googleAuthProvider)
+        let response = await firebase.auth().signInWithPopup(this.$googleAuthProvider)
         this.dialog = false
       },
       async facebookLogin() {
-        let response = await firebase.auth().signInWithRedirect(this.$facebookAuthProvider)
+        let response = await firebase.auth().signInWithPopup(this.$facebookAuthProvider)
         this.dialog = false
       },
       async emailLogin() {

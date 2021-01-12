@@ -6,6 +6,11 @@
       color="primary"
       dark
     >
+         <router-link to="/">
+          <v-toolbar-title class="logo_text">
+              <span>DB Architect</span>
+          </v-toolbar-title>
+         </router-link>
       <v-spacer></v-spacer>
       <v-btn v-if="!user" color="success" @click="loginDialog()">LOGIN</v-btn>
       <userMenu  v-if="user"/>
@@ -98,3 +103,17 @@ export default {
     },
 };
 </script>
+
+
+<style >
+  @font-face {
+    font-family: "ethnocentric";
+    src: local("ethnocentric"),
+    url(./assets/ethnocentric_rg.ttf) format("truetype");
+  }
+ 
+  .logo_text {
+     font-family: "ethnocentric";
+     color: white;
+  }
+</style>

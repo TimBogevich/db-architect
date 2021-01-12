@@ -6,6 +6,7 @@ import vuetify from './plugins/vuetify';
 import firebase from "./firebaseConf"
 import i18n from './i18n'
 import * as ModalDialogs from 'vue-modal-dialogs'
+import VuexActionTracker from "vuex-action-tracker";
 
 Vue.config.productionTip = false
 
@@ -19,6 +20,7 @@ Vue.prototype.$dialogLogin = dialogLogin
 Vue.prototype.$areYouSure = dialogAreYouSure
 
 Vue.use(ModalDialogs) 
+Vue.use(new VuexActionTracker(), store);
 
 new Vue({
   router,

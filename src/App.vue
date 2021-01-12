@@ -10,6 +10,15 @@
       <v-btn v-if="!user" color="success" @click="loginDialog()">LOGIN</v-btn>
       <userMenu  v-if="user"/>
 
+      <v-progress-linear
+      :active="loaderIsVisible()"
+      indeterminate
+      bottom
+      fixed
+      color="white"
+      height="6"
+      ></v-progress-linear>
+
     </v-app-bar>
 
     <v-navigation-drawer
@@ -63,6 +72,9 @@ export default {
 
   computed: {
     user: sync("general/user"),
+    loaderIsVisible() {
+      return this.$store.getters["vuexActionTracker/hasRunningActions"]
+    },
   },
 
   methods: {

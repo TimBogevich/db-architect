@@ -1,13 +1,12 @@
 <template>
   <div class="text-center">
     <v-menu
-    :close-on-click="false"
     :close-on-content-click="false"
     offset-y>
       <template v-slot:activator="{ on, attrs }">
         <v-avatar
-         v-bind="attrs"
-         v-on="on"
+          v-bind="attrs"
+          v-on="on"
           color="primary"
         >
           <img
@@ -24,19 +23,21 @@
         <v-list-item three-line>
           <v-list-item-content>
             <div class="overline mb-4">
-              {{user.name}}
+              User menu
             </div>
             <v-list-item-title class="headline mb-1">
-              Headline 5
+              {{user.name}}
             </v-list-item-title>
             <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle>
           </v-list-item-content>
 
           <v-list-item-avatar
             tile
-            size="80"
+            size="100"
             color="grey"
-          ></v-list-item-avatar>
+          >
+            <v-img :src="user.photoURL"></v-img>
+          </v-list-item-avatar>
         </v-list-item>
 
         <v-card-actions>

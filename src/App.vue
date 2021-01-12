@@ -25,14 +25,14 @@
       clipped
     >
 
-      <v-list dense>
-        <v-list-item link to="table_editor">
+      <v-list dense v-for="item in navBarLinks" :key="item.link">
+        <v-list-item link :to="item.link">
           <v-list-item-content>
             <v-list-item-title>
               <v-icon>
-                mdi-table
+                {{item.icon}}
               </v-icon>
-              Table editor
+              {{item.name}}
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
@@ -63,6 +63,10 @@ export default {
   },
 
   data: () => ({
+    navBarLinks : [
+      {name : "Table editor", link : "table_editor", icon : "mdi-table"},
+      {name : "Storage Calculator", link : "storage_calc", icon : "mdi-store"},
+    ]
   }),
 
   computed: {

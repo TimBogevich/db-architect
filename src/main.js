@@ -22,6 +22,7 @@ Vue.prototype.$areYouSure = dialogAreYouSure
 Vue.use(ModalDialogs) 
 Vue.use(new VuexActionTracker(), store);
 
+
 new Vue({
   router,
   store,

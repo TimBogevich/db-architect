@@ -4,16 +4,15 @@
       dense
       app
       clipped-left
-      color="primary"
-      dark
+      color="accent"
     >
-         <router-link to="/">
-          <v-toolbar-title class="logo_text">
-              <span>DB Tools</span>
-          </v-toolbar-title>
-         </router-link>
+      <router-link to="/">
+      <v-toolbar-title class="logo_text">
+          <span>DB Tools</span>
+      </v-toolbar-title>
+      </router-link>
       <v-spacer></v-spacer>
-      <v-btn v-if="!user"  text @click="loginDialog()">LOGIN</v-btn>
+      <v-btn v-if="!user" dark text @click="loginDialog()">LOGIN</v-btn>
       <userMenu  v-if="user"/>
 
       <v-progress-linear

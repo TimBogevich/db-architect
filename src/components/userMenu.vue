@@ -51,6 +51,8 @@
           >
             Log out
           </v-btn>
+          <v-spacer></v-spacer>
+          <v-switch v-model="$vuetify.theme.dark"></v-switch>
         </v-card-actions>
       </v-card>
     </v-menu>

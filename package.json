@@ -15,6 +15,7 @@
     "vue-i18n": "^8.17.3",
     "vue-modal-dialogs": "^3.0.0",
     "vue-router": "^3.2.0",
+    "vuejs-spreadsheet": "^2.1.7",
     "vuetify": "^2.2.11",
     "vuex": "^3.4.0",
     "vuex-action-tracker": "0.0.5",
